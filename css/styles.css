@@ -3,6 +3,17 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600);
 
+
+* {box-sizing:border-box; font-family:"Open Sans", sans-serif;}
+
+body {background-color:#FFF;}
+
+body {
+  margin:0 0 0 0;
+  padding:0;
+  overflow-x:hidden;
+}
+
 /*  + + + +  Body Styles  + + + + */
 
 .container-main-body{
@@ -12,8 +23,28 @@
   background-color:#fff;
 }
 
-
-
+.header-box{
+   background-color:FaFaFa;
+   height:400px;
+   padding:100px;
+ }
+ 
+ .header-box h1{
+   color:#fff;
+   text-transform:none;
+   font-size:32px;
+   line-height:160%;
+   margin:-20px -20px;
+   padding:0 20px;
+   background-color:#aaa;
+ }
+ 
+.container-white{
+   background:#fff;
+   height:100%;
+   box-shadow:0 1px 2px 0 #C7C7C7;
+   padding:20px;
+}
 /* - - - - End Body Styles - - - - */
 
 

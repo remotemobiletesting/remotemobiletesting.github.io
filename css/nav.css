@@ -2,29 +2,27 @@
 /* CSS Document */
 
 
-* {box-sizing:border-box; font-family:"Open Sans", sans-serif;}
 
-/* + + + + Color Theme + + + + */
-body {background-color:#FFF;}
-nav {background-color:#22262E;}
-.nav-menu .norm a:after {background-color:#3C5261;}
-.nav-menu .norm a:before {background-color:#455F70;}
+/* + + + + Nav Color Theme + + + + */
+nav {background-color:#34495E;}
+.nav-menu .norm a:after {background-color:#4B6988;}
+.nav-menu .norm a:before {background-color:#537597;}
+.nav-menu .active a:before {background-color:#4B6988;}
 /* - - - - End Color Theme - - - - */
 
 
+.nav-spacer{
+   height:72px;
+   }
 
-body {
-  margin:0 0 0 0;
-  padding:0;
-  overflow:hidden;
-}
+
 
 
 /* + + + + Navbar Body + + + + */
 
 nav {
   position:absolute;
-  height:82px;
+  height:72px;
   width:100vw;
 }
 
@@ -45,7 +43,8 @@ nav {
    text-align:center;
    z-index:100;
    background-color:transparent;
-   line-height:80px;
+   line-height:70px;
+
    overflow:hidden;
 }
 
@@ -58,6 +57,7 @@ nav {
   font-size:16px;
   text-decoration:none;
   text-transform:uppercase;
+     margin-top:2px;
 }
 
    /* + + Style for Top-Level li's Only + + */
@@ -72,7 +72,8 @@ nav {
   content:"";
   position:absolute;
   display:inline-block;
-  height:80px;
+  height:70px;
+     margin-top:-2px;
 }
 
 .nav-menu .norm a:after {
