@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+* {box-sizing:border-box; font-family:"Open Sans", sans-serif;}
+
+/* + + + + Color Theme + + + + */
+body {background-color:#FFF;}
+nav {background-color:#22262E;}
+.nav-menu .norm a:after {background-color:#3C5261;}
+.nav-menu .norm a:before {background-color:#455F70;}
+/* - - - - End Color Theme - - - - */
+
+
+
+body {
+  margin:0 0 0 0;
+  padding:0;
+  overflow:hidden;
+}
+
+
+/* + + + + Navbar Body + + + + */
+
+nav {
+  position:absolute;
+  height:82px;
+  width:100vw;
+}
+
+.nav-menu {
+  display:flex;
+  margin-top:0px;
+  padding:0;
+}
+
+/* - - - - End Navbar Body - - - - */
+
+
+/* + + + + Nav Buttons + + + + */
+
+.nav-menu li {
+  display:block;
+  flex-grow:1;
+   text-align:center;
+   z-index:100;
+   background-color:transparent;
+   line-height:80px;
+   overflow:hidden;
+}
+
+.nav-menu li a {  
+  position:relative;
+  display:inline-block;
+  z-index:50;
+  width:100%;
+  color:#fff;
+  font-size:16px;
+  text-decoration:none;
+  text-transform:uppercase;
+}
+
+   /* + + Style for Top-Level li's Only + + */
+   .nav-menu .li-1{width:100%;}
+
+
+
+/*  + + + +  Nav Button Pseudos  + + + + */
+
+.nav-menu .norm a:after, 
+.nav-menu .norm a:before {
+  content:"";
+  position:absolute;
+  display:inline-block;
+  height:80px;
+}
+
+.nav-menu .norm a:after {
+  left:50%;
+  width:0%;
+  z-index:-20;
+ -webkit-transition: .5s ease all; 
+  transition: .5s ease all;
+}
+
+.nav-menu .norm a:hover:after {
+  left:0%;
+  width:100%;
+ -webkit-transition: .2s ease-out all; 
+  transition: .2s ease-out all;
+}
+
+.nav-menu .norm a:before {
+  left:0%;
+  width:100%;
+  z-index:-50;
+}
+
+/* - - - - End Nav Button Pseudos - - - - */
+
