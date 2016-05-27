@@ -1,101 +1,87 @@
 @charset "utf-8";
 /* CSS Document */
 
-
+@import url(http://fonts.googleapis.com/css?family=Raleway:400);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100);
 
 /* + + + + Nav Color Theme + + + + */
-nav {background-color:#34495E;}
-.nav-menu .norm a:after {background-color:#4B6988;}
-.nav-menu .norm a:before {background-color:#537597;}
-.nav-menu .active a:before {background-color:#4B6988;}
+
+nav {  background-color:#34495E;}
+nav #logo { background: #66AA5E;}
+nav a {  color: #EEE;}
+nav a.active .fa { border-left: 3px solid #f60;}
+nav a:hover {  background: #444;}
 /* - - - - End Color Theme - - - - */
 
 
-.nav-spacer{
-   height:72px;
-   }
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto,'Helvetica Neue', Helvetica, sans-serif;
+}
 
-
-/* + + + + Navbar Body + + + + */
+.container-body{
+  padding-left:8rem !important;
+ }
 
 nav {
-  position:absolute;
-  height:72px;
-  width:100vw;
+  position: fixed;
+  height: 100vh;
+  width: 8rem;
+  overflow: hidden;
+  transition: width .3s ease;
 }
 
-.nav-menu {
-  display:flex;
-  margin-top:0px;
-  padding:0;
+nav:hover, nav.pinned {
+  width: 20rem;
 }
 
-/* - - - - End Navbar Body - - - - */
-
-
-/* + + + + Nav Buttons + + + + */
-
-.nav-menu li {
-  display:block;
-  flex-grow:1;
-   text-align:center;
-   z-index:100;
-   background-color:transparent;
-   line-height:70px;
-
-   overflow:hidden;
+nav #logo {
+  height: 8rem;
+  line-height: 4rem;
+  padding-left: .7rem;
+  margin-bottom:8px;
 }
 
-.nav-menu li a {  
-  position:relative;
-  display:inline-block;
-  z-index:50;
-  width:100%;
-  color:#fff;
-  font-size:16px;
-  text-decoration:none;
+nav a {
+  text-decoration: none;
   text-transform:uppercase;
-     margin-top:2px;
+  display: table;
+  width: 20rem;
+  margin-top:2rem;
 }
 
-   /* + + Style for Top-Level li's Only + + */
-   .nav-menu .li-1{width:100%;}
-
-
-
-/*  + + + +  Nav Button Pseudos  + + + + */
-
-.nav-menu .norm a:after, 
-.nav-menu .norm a:before {
-  content:"";
-  position:absolute;
-  display:inline-block;
-  height:70px;
-     margin-top:-2px;
+nav a.active .fa {
+  border-right: 3px solid transparent;
 }
 
-.nav-menu .norm a:after {
-  left:50%;
-  width:0%;
-  z-index:-20;
- -webkit-transition: .5s ease all; 
-  transition: .5s ease all;
+nav a:hover {
+  color: #BEE0ff;
+  text-decoration:none;
 }
 
-.nav-menu .norm a:hover:after {
-  left:0%;
-  width:100%;
- -webkit-transition: .2s ease-out all; 
-  transition: .2s ease-out all;
+nav a .fa {
+  width: 8rem;
+  display: table-cell;
+  font-size: 4rem;
+  padding: 1rem 0;
+  text-align: center;
 }
 
-.nav-menu .norm a:before {
-  left:0%;
-  width:100%;
-  z-index:-50;
+nav a .label {
+  display: table-cell;
+  text-align:left !important;
+  vertical-align:middle;
 }
 
-/* - - - - End Nav Button Pseudos - - - - */
+nav .label{
+   font-size:16px !important;
+ }
 
