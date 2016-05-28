@@ -1,105 +1,177 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url(http://fonts.googleapis.com/css?family=Raleway:400);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100);
-
 /* + + + + Nav Color Theme + + + + */
 
-nav {  background-color:#555;}
-nav #logo { background: #555;}
+/*nav {  background-color:#34495E;}
+nav #logo { background: #34495E;}
 nav a {  color: #EEE;}
 nav a.active .fa { border-left: 3px solid #f60;}
-nav a:hover {  background: #53903D;}
+nav a:hover {  background: #53903D;}*/
+
 /* - - - - End Color Theme - - - - */
 
-
-
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Roboto,'Helvetica Neue', Helvetica, sans-serif;
+  min-width: 320px;
+  padding: 0px;
 }
 
-.container-body{
-  padding-left:8rem !important;
+h1 {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 2rem;
+  font-size: 24px;
+}
+p {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  max-width: 50ex;
+}
+p.large {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+a {
+  color: #fff;
+}
+.greedy-nav {
+ z-index:1000;
+  position: relative;
+  min-width: 250px;
+  background-color:#537597;
+
+}
+
+.greedy-nav ul {
+  padding-left:0;
+  }
+
+.brand-logo{
+  border-left:none !important;
+ }
+ 
+.brand-logo a{
+   padding:6px !important; 
+   margin-right:15px;
+   margin-left:15px;
+ }
+ 
+.logo{
+ height:66px;
+  width:auto;
+  padding:0 10px;
  }
 
-nav {
-  position: fixed;
-  height: 100vh;
-  width: 8rem;
-  overflow: hidden;
-  transition: width .3s ease;
-}
-
-nav:hover, nav.pinned {
-  width: 20rem;
-}
-
-nav #logo {
- overflow:hidden;
-  height: 12rem;
-  line-height: 4rem;
-  padding-left: 0rem;
-  margin-bottom:8px;
-  border-bottom:2px solid #fff;
-}
-
-#logo img{
- width:5.1em;
- margin-left:.5em;  
- margin-top: 1.4em; 
-  }
-#logo h1{
- color:#fff;
- font-weight:bold;
- position:absolute;
- display:inline;  
-  font-size:22px;
-  line-height:22px;
-  top:0;
-  left:4.5em;
-  }
-
-nav a {
+.greedy-nav a {
+  display: block;
+  vertical-align:middle;
+  padding: 0px 40px 0px 40px;
+  line-height:80px;
+  background-color:transparent;
+  font-size: 20px;
+  color: #fff;
   text-decoration: none;
   text-transform:uppercase;
-  display: table;
-  width: 20rem;
-  margin-top:2rem;
 }
 
-nav a.active .fa {
-  border-right: 3px solid transparent;
+.greedy-nav li a{
+padding-bottom:0 !important;    
+padding-top:0 !important;    
+  }
+
+.greedy-nav li:hover {
+  background-color: #ef6c00;
 }
 
-nav a:hover {
-  color: #BEE0ff;
-  text-decoration:none;
-}
 
-nav a .fa {
-  width: 8rem;
+
+.greedy-nav .visible-links {
+  margin:0;
+  display: inline-table;
+}
+.greedy-nav .visible-links li {
   display: table-cell;
-  font-size: 4rem;
-  padding: 1rem 0;
+  border-left: 2px solid #fff;
+
+}
+.greedy-nav .hidden-links {
+  position: absolute;
+  right: 0px;
+  top: 80%;
+  background-color:#537597;
+}
+.greedy-nav .hidden-links li {
+  display: block;
+  border-top: 2px solid #fff;
+}
+.greedy-nav .visible-links li:first-child {
+  font-weight: bold;
+}
+.greedy-nav .visible-links li:first-child a {
+  color: #ff9800 !important;
+}
+.greedy-nav .hidden {
+  visibility: hidden;
+}
+
+
+
+.greedy-nav button {
+  position: absolute;
+  height: 100%;
+  right: 0;
+  padding: 0 15px;
+  border: 0;
+  outline: none;
+  background-color: #f57c00;
+  color: #fff;
+  cursor: pointer;
+}
+.greedy-nav button:hover {
+  background-color: #ef6c00;
+}
+.greedy-nav button::after {
+  content: attr(count);
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -16px;
+  top: 6px;
   text-align: center;
+  background-color: #ef6c00;
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  font-weight: bold;
+}
+.greedy-nav button:hover::after {
+  transform: scale(1.075);
+}
+.greedy-nav .hamburger {
+  position: relative;
+  width: 32px;
+  height: 4px;
+  background: #fff;
+  margin: auto;
+}
+.greedy-nav .hamburger:before,
+.greedy-nav .hamburger:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 4px;
+  background: #fff;
+}
+.greedy-nav .hamburger:before {
+  top: -8px;
+}
+.greedy-nav .hamburger:after {
+  bottom: -8px;
 }
 
-nav a .label {
-  display: table-cell;
-  text-align:left !important;
-  vertical-align:middle;
-}
-
-nav .label{
-   font-size:16px !important;
- }
 
