@@ -4,53 +4,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600);
 
 
-* {box-sizing:border-box; font-family:"Open Sans", sans-serif;}
+/* * {box-sizing:border-box; font-family:"Open Sans", sans-serif;} */
 
-body {background-color:#fff;}
-
-body {
-  overflow-x:hidden;
-}
 
 /*  + + + +  Body Styles  + + + + */
-
- .header-box{
-     height:86vh;
-  }
-  .header-box .container{
-     height:100%;
-  }
-  .header-box .container h1{
-   position:absolute;
-   font-size:80px;
-   text-align:right;
-   color:#555; 
-   bottom:4vh;
-   right:2vw;
-  }
- @media (max-width:767px){
-     .header-box .container h1{
-     font-size:11vw;
-     bottom:1vh;
-      }
-     }
-     
-  .header-box .container .col-xs-5{
-   height:100%
-  }
-  
-   .header-box .container .col-xs-7{
-   height:100%
-  }
- 
-.rocket{
-  position:absolute;
-  width:26vw;
-  max-width:350px;
-  min-width:180px;
-  float:right;
-  bottom:0;
- }
 
  
 .white{
