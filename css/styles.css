@@ -4,16 +4,128 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600);
 
 
-/* * {box-sizing:border-box; font-family:"Open Sans", sans-serif;} */
+* {font-family:"Open Sans", sans-serif;}
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open-sans','Helvetica Neue', Helvetica, sans-serif;
+}
+
+b{font-weight:400}
 
 /*  + + + +  Body Styles  + + + + */
 
- 
-.white{
-   background:#fff;
-   box-shadow:0 1px 2px 0 #C7C7C7;
-   padding:20px;
+ .container-body{
+ position: relative;
+ z-index: 1;
+ padding-left: 9rem !important;
+ padding-right:0;
+ padding-top: 0;
+ background-color: #F0F0F0;
+ }
+
+.container-header{
+  height:90vh;
+  max-height:500px;
+  min-height:400px;
+  padding-left:12vw;
+  background: url("https://raw.githubusercontent.com/remotemobiletesting/remotemobiletesting.github.io/master/img/handphone.png");
+    background-size: auto 80%;
+    background-origin:content-box;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+.col-main-title{
+
+  height:90vh;
+  max-height:500px;
+  min-height:300px;
+}
+@media (max-width:991px){
+    .col-main-title{margin-left:0;}
+    .bottom{width: 70vw; top:10vh !important;right:6vh !important;}
+    .main-title{ position:relative; text-align:right !important; font-size:42px !important; }
+    .main-subtitle{position:relative;text-align:right !important; font-size:20px !important;}
+    .container-header{ padding-left:2vw; padding-right:0vw; background-position: left bottom;}
+    }
+@media (max-width:767px){
+    .col-main-title{}
+    }
+    
+.bottom{position:absolute; display:block; top:14vh; background-color:rgba(52,73,94,0.79); border-radius:2px; padding:6px 18px 6px 18px; right:8vw;}
+
+.main-title{  
+  position:relative;
+  text-align:left;
+  font-size:50px;
+  color:#fff;
+  font-weight:300;
+  margin:0;
+}
+
+.main-subtitle{
+  position:relative;
+  font-size:26px;
+  text-align:left;
+  color:#fff;
+  font-weight:300;
+  margin:0;
+}
+
+/*@media (min-width:1399px) and (max-width:1600px){
+   .container-header{ padding-right:16vw;}
+    .main-title{ font-size:50px;}
+    .main-subtitle{   font-size:24px; }
+    .col-main-title{   margin-left:10vw;}
+    .bottom{bottom:4vh;}
+}
+@media (min-width:1200px) and (max-width:1400px){
+  .container-header{ padding-right:13vw;}
+    .main-title{ font-size:48px;}
+    .main-subtitle{    font-size:22px;}
+    .col-main-title{   margin-left:8vw;}
+    .bottom{bottom:3vh;}
+}
+
+@media (min-width:992px) and (max-width:1199px){
+  .container-header{ padding-right:8vw;}
+  .main-title{ font-size:42px; }
+  .main-subtitle{ font-size:20px; }
+  .col-main-title{   margin-left:6vw;}
+  .bottom{bottom:2vh;}
+}
+@media (min-width:768px) and (max-width:991px){
+  .container-header{ padding-right:6vw;}
+  .main-title{  white-space:initial; font-size:42px; }
+  .col-main-title{   margin-left:4vw; width:40%;}
+  .bottom{bottom:1.5vh;} 
+}
+
+@media (max-width:767px) {
+  .container-header{  background-size: 70%; background-position:left bottom; padding-left:5vw; padding-right:5vw;}
+  .col-main-title{float:right; margin-right:4vw;}
+  .main-title{ font-size:48px; text-align:right; white-space:initial;}
+  .main-subtitle { text-align:right; }
+  .bottom{top:5vh; bottom:initial;}
+}*/
+
+
+.white{ background:#fff;}
+
+.container-content{
+ background-color:#fff;
+  height:90vh;
+  max-height:500px;
+  min-height:300px;  
+  box-shadow:0px -1px 1px 1px #E3E3E3;
 }
 /* - - - - End Body Styles - - - - */
 
@@ -53,13 +165,13 @@ table td img {
   text-align: center;
 }
 
-@media (min-width:601px){ 
+@media (min-width:768px){ 
   table {
   min-width:580px;
 }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   table {
     border: 0;
   }
